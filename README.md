@@ -22,8 +22,8 @@
 - [☁️ SaaS & Hosted Platforms](#️-saas--hosted-platforms)
 - [🛠️ Open-Source GitHub Projects](#️-open-source-github-projects)
 - [🧭 Architecture & Selection Guidance](#-architecture--selection-guidance)
-- [📈 Star History](#-star-history)
 - [💖 Support & Sponsorship](#-support--sponsorship)
+- [📈 Star History](#-star-history)
 - [🤝 How to Contribute](#-how-to-contribute)
 - [⚖️ Disclaimer](#-disclaimer)
 
@@ -94,19 +94,20 @@ Choosing the right event streaming foundation depends on throughput requirements
 
 ---
 
-## 📈 Star History
-
-[![Star History Chart](https://star-history.dera.page/svg?repos=apache/kafka,apache/flink,nats-io/nats-server,redpanda-data/redpanda,apache/pulsar&type=date&legend=top-left)](https://star-history.dera.page/#apache/kafka,apache/flink,nats-io/nats-server,redpanda-data/redpanda,apache/pulsar&type=date&legend=top-left)
-
----
-
 ## 💖 Support & Sponsorship
 
-Thank you for exploring and utilizing this curated open-source index! If you found this repository valuable for your distributed systems architecture, event-driven pipelines, or real-time infrastructure decisions:
+Thank you for exploring and utilizing this curated open-source index! If you found this repository valuable for your distributed systems architecture, event-driven pipelines, or real-time infrastructure decisions, please consider supporting the project:
 
 - ⭐ **Star this repository** to improve discovery and help other systems engineers.
 - 🍴 **Fork and share** with colleagues and platform engineering teams.
-- ☕ **Support Maintenance**: Sponsor ongoing maintenance and ecosystem tracking via [GitHub Sponsors](https://github.com/sponsors/ishandutta2007).
+- ☕ **Buy me a coffee / Sponsor**: Support ongoing maintenance and ecosystem additions via the [GitHub Sponsor Dashboard](https://github.com/sponsors/ishandutta2007).
+
+Your support keeps this guide fresh, accurate, and actively maintained! 🙌
+
+---
+
+##  Star History
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Event-Streaming-Infrastructure&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Event-Streaming-Infrastructure&type=date&legend=top-left)
 
 ---
 

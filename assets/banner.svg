@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="100%" height="340" style="background:#090d16;overflow:hidden;border-radius:12px;">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#0e172a"/>
+      <stop offset="100%" stop-color="#080c14"/>
+    </linearGradient>
+
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+
+    <linearGradient id="streamGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#3b82f6" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <linearGradient id="streamGrad2" x1="100%" y1="0%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#ec4899" stop-opacity="0.7"/>
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.7"/>
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="glowSoft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .pulse-grid { stroke: rgba(148, 163, 184, 0.07); stroke-width: 1; }
+    .flow-line { fill: none; stroke-dasharray: 8 12; animation: flowDash 20s linear infinite; }
+    .flow-line-rev { fill: none; stroke-dasharray: 6 10; animation: flowDashRev 16s linear infinite; }
+    .pulse-node { animation: nodePulse 3s ease-in-out infinite alternate; }
+    .packet { animation: packetTravel 8s linear infinite; }
+    .packet-2 { animation: packetTravel2 10s linear infinite; }
+    .packet-3 { animation: packetTravel3 7s linear infinite; }
+
+    @keyframes flowDash {
+      0% { stroke-dashoffset: 400; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes flowDashRev {
+      0% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: 400; }
+    }
+    @keyframes nodePulse {
+      0% { r: 4px; opacity: 0.5; }
+      100% { r: 7px; opacity: 1; }
+    }
+    @keyframes packetTravel {
+      0% { offset-distance: 0%; opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { offset-distance: 100%; opacity: 0; }
+    }
+    .badge-pill {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      fill: #94a3b8;
+    }
+  </style>
+
+  <!-- Background Base -->
+  <rect width="1200" height="340" fill="url(#bgGrad)"/>
+
+  <!-- Geometric Grid Matrix (Subtle background) -->
+  <g class="pulse-grid">
+    <line x1="0" y1="60" x2="1200" y2="60"/>
+    <line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="180" x2="1200" y2="180"/>
+    <line x1="0" y1="240" x2="1200" y2="240"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="150" y1="0" x2="150" y2="340"/>
+    <line x1="300" y1="0" x2="300" y2="340"/>
+    <line x1="450" y1="0" x2="450" y2="340"/>
+    <line x1="600" y1="0" x2="600" y2="340"/>
+    <line x1="750" y1="0" x2="750" y2="340"/>
+    <line x1="900" y1="0" x2="900" y2="340"/>
+    <line x1="1050" y1="0" x2="1050" y2="340"/>
+  </g>
+
+  <!-- Ambient Light Orbs (Background depth) -->
+  <circle cx="200" cy="80" r="140" fill="#38bdf8" opacity="0.08" filter="url(#glow)"/>
+  <circle cx="1000" cy="260" r="160" fill="#818cf8" opacity="0.09" filter="url(#glow)"/>
+  <circle cx="600" cy="170" r="120" fill="#c084fc" opacity="0.05" filter="url(#glow)"/>
+
+  <!-- Dynamic Animated Streaming Pipelines (Behind text, at top and bottom margins) -->
+  <path id="streamPath1" class="flow-line" d="M -50,50 Q 300,10 600,60 T 1250,40" stroke="url(#streamGrad1)" stroke-width="2.5" opacity="0.5"/>
+  <path id="streamPath2" class="flow-line-rev" d="M -50,290 Q 350,330 700,285 T 1250,310" stroke="url(#streamGrad2)" stroke-width="2.5" opacity="0.5"/>
+  <path id="streamPath3" class="flow-line" d="M -50,90 C 250,110 400,20 750,75 S 1100,25 1250,85" stroke="#38bdf8" stroke-width="1.5" opacity="0.3"/>
+  <path id="streamPath4" class="flow-line-rev" d="M -50,260 C 220,220 500,320 850,250 S 1150,280 1250,240" stroke="#a855f7" stroke-width="1.5" opacity="0.3"/>
+
+  <!-- Stream Event Bus Packet Elements -->
+  <circle cx="250" cy="53" r="5" fill="#38bdf8" filter="url(#glowSoft)" class="pulse-node"/>
+  <circle cx="600" cy="60" r="6" fill="#818cf8" filter="url(#glowSoft)" class="pulse-node" style="animation-delay: 1s;"/>
+  <circle cx="950" cy="45" r="5" fill="#c084fc" filter="url(#glowSoft)" class="pulse-node" style="animation-delay: 2s;"/>
+
+  <circle cx="200" cy="285" r="5" fill="#ec4899" filter="url(#glowSoft)" class="pulse-node" style="animation-delay: 0.5s;"/>
+  <circle cx="700" cy="285" r="6" fill="#8b5cf6" filter="url(#glowSoft)" class="pulse-node" style="animation-delay: 1.5s;"/>
+  <circle cx="1050" cy="305" r="5" fill="#3b82f6" filter="url(#glowSoft)" class="pulse-node" style="animation-delay: 2.2s;"/>
+
+  <!-- FOREGROUND CONTAINER: Solid Contrast Backing to guarantee Title/Subtitle visibility -->
+  <rect x="140" y="70" width="920" height="175" rx="20" fill="#0b1120" fill-opacity="0.82" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" filter="url(#glowSoft)"/>
+
+  <!-- FOREGROUND CONTENT: Title, Subtitle, Tags -->
+  <g text-anchor="middle">
+    <!-- Category Badge Pill -->
+    <rect x="495" y="85" width="210" height="26" rx="13" fill="#1e293b" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1"/>
+    <text x="600" y="102" class="badge-pill" fill="#38bdf8">⚡ PRODUCTION STREAMING INFRA</text>
+
+    <!-- Main Title -->
+    <text x="600" y="152" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="38" font-weight="800" letter-spacing="-0.5" fill="url(#textGrad)">
+      Awesome Event Streaming Infrastructure
+    </text>
+
+    <!-- Subtitle -->
+    <text x="600" y="188" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="400" fill="#cbd5e1" letter-spacing="0.2">
+      Curated Guide to Distributed Logs, Real-Time Pipelines, Pub/Sub &amp; Stream Processors
+    </text>
+
+    <!-- Tech Stack Indicator Badges -->
+    <g transform="translate(0, 206)">
+      <rect x="320" y="0" width="105" height="24" rx="6" fill="#1e1b4b" stroke="#6366f1" stroke-width="0.8"/>
+      <text x="372" y="16" class="badge-pill" fill="#a5b4fc">Apache Kafka</text>
+
+      <rect x="435" y="0" width="105" height="24" rx="6" fill="#082f49" stroke="#0284c7" stroke-width="0.8"/>
+      <text x="487" y="16" class="badge-pill" fill="#7dd3fc">Apache Pulsar</text>
+
+      <rect x="550" y="0" width="95" height="24" rx="6" fill="#3b0764" stroke="#9333ea" stroke-width="0.8"/>
+      <text x="597" y="16" class="badge-pill" fill="#d8b4fe">Redpanda</text>
+
+      <rect x="655" y="0" width="100" height="24" rx="6" fill="#14532d" stroke="#16a34a" stroke-width="0.8"/>
+      <text x="705" y="16" class="badge-pill" fill="#86efac">Apache Flink</text>
+
+      <rect x="765" y="0" width="115" height="24" rx="6" fill="#450a0a" stroke="#dc2626" stroke-width="0.8"/>
+      <text x="822" y="16" class="badge-pill" fill="#fca5a5">NATS Server</text>
+    </g>
+  </g>
+</svg>

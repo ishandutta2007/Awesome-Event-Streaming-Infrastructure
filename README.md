@@ -7,7 +7,7 @@
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
   <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Event-Streaming-Infrastructure/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Event-Streaming-Infrastructure?style=social" alt="GitHub Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Event-Streaming-Infrastructure/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Event-Streaming-Infrastructure?style=social" alt="GitHub_Stars" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Event-Streaming-Infrastructure/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Event-Streaming-Infrastructure?style=social" alt="GitHub Forks" /></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 </p>
@@ -60,9 +60,9 @@ Managed event streaming brokers, serverless message buses, and stream processing
 
 ## 🛠️ Open-Source GitHub Projects
 
-Production-grade distributed commit logs, real-time message brokers, stream processing engines, and event-driven frameworks. Sorted by GitHub star count (descending).
+Production-grade distributed commit logs, real-time message brokers, stream processing engines, and event-driven frameworks. Sorted by GitHub Stars_Count (descending).
 
-| Project | Stars | Primary Language | License | Architectural Overview & Core Capabilities |
+| Project | GitHub_Stars | Primary Language | License | Architectural Overview & Core Capabilities |
 | :--- | :--- | :--- | :--- | :--- |
 | **[Apache Kafka](https://github.com/apache/kafka)** | [![Stars](https://img.shields.io/github/stars/apache/kafka?style=social&color=white)](https://github.com/apache/kafka/stargazers) | Java / Scala | Apache-2.0 | The industry-standard distributed, partitioned commit log. Features KRaft consensus (ZooKeeper removed in 4.0), Kafka Connect, and Kafka Streams for high-throughput stream topologies. |
 | **[Apache Flink](https://github.com/apache/flink)** | [![Stars](https://img.shields.io/github/stars/apache/flink?style=social&color=white)](https://github.com/apache/flink/stargazers) | Java / Scala | Apache-2.0 | Distributed stream processing engine delivering true event-driven streaming, low-latency stateful computations, exactly-once processing guarantees, and robust CEP SQL. |
@@ -117,8 +117,8 @@ Contributions from platform engineers and real-time developers are welcome!
 
 1. Fork the repository.
 2. Ensure submitted projects have active maintenance and clear open-source or commercial documentation.
-3. Include the official website, GitHub repository link, star badge (`style=social&color=white`), and an objective architectural summary.
-4. Keep table rows properly sorted (Valuation/Revenue for SaaS, GitHub stars for Open Source).
+3. Include the official website, GitHub repository link, Stars_Badge (`style=social&color=white`), and an objective architectural summary.
+4. Keep table rows properly sorted (Valuation/Revenue for SaaS, GitHub_Stars for Open Source).
 5. Submit a pull request with an explanatory description of the change.
 
 ---
